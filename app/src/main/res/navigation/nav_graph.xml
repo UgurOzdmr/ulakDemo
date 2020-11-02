@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postsFragment2">
+    <fragment
+        android:id="@+id/postsFragment2"
+        android:name="com.example.ulakdemo.ui.auth.main.posts.PostsFragment"
+        android:label="fragment_posts"
+        tools:layout="@layout/fragment_posts" >
+        <action
+            android:id="@+id/action_postsFragment2_to_commentsFragment2"
+            app:destination="@id/commentsFragment2" />
+        <action
+            android:id="@+id/action_postsFragment2_to_photosFragment2"
+            app:destination="@id/photosFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment2"
+        android:name="com.example.ulakdemo.ui.auth.main.comments.CommentsFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" >
+        <action
+            android:id="@+id/action_commentsFragment2_to_postsFragment2"
+            app:destination="@id/postsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/photosFragment2"
+        android:name="com.example.ulakdemo.ui.auth.main.photos.PhotosFragment"
+        android:label="fragment_photos"
+        tools:layout="@layout/fragment_photos" >
+        <action
+            android:id="@+id/action_photosFragment2_to_postsFragment2"
+            app:destination="@id/postsFragment2" />
+    </fragment>
+</navigation>
